@@ -1,0 +1,10 @@
+CREATE TABLE sales_rep (
+id INT NOT NULL,
+name VARCHAR(25) NOT NULL,
+region_id INT NOT NULL,
+CONSTRAINT sales_reps_Pkey PRIMARY KEY (id),
+CONSTRAINT FK_region_id FOREIGN KEY (region_id) REFERENCES dbo.region (id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+);
+GO
